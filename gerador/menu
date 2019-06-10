@@ -105,7 +105,7 @@ tput cuu1 && tput dl1
 done
 if [[ $Key = @(s|S|y|Y) ]]; then
 msg -verm "$(fun_trans "Perfecto Iniciando Procedimiento"): "
-wget -O $HOME/instalar.sh https://www.dropbox.com/s/s4k7ovuimvkr3zf/instalar.sh &>/dev/null
+wget -O $HOME/instalar.sh https://raw.githubusercontent.com/MaxiiARG/ADM-ULTIMATE-IFS/master/instalar.sh &>/dev/null
 chmod +x $HOME/instalar.s*
 local LINGUAGE=$(cat ${SCPidioma})
 $HOME/instalar.sh "${LINGUAGE}"
@@ -258,7 +258,7 @@ curl "$Key" &> /dev/null
 if [[ $? = "0" ]]; then
 echo -e "\033[1;32m $(fun_trans "Link Valido")"
 REC=$(echo $Key|awk -F"/" '{print $NF}')
-echo -ne "\033[1;33m$(fun_trans "Recebendo Recurso"): \033[1;31m[$REC]"
+echo -ne "\033[1;33m$(fun_trans "Recibiendo recursos"): \033[1;31m[$REC]"
 wget -O ${SCPfrm}/${REC} $Key &>/dev/null && echo -e "\033[1;31m- \033[1;32m$(fun_trans "Recibido")" && chmod +x ${SCPfrm}/${REC} || echo -e "\033[1;31m- \033[1;31m$(fun_trans "Error al recibir")"
 else
 wget $(ofus "$Key") >/dev/null 2>&1 && echo -e "\033[1;32m $(fun_trans "LLAVE Valida")" || {
@@ -379,7 +379,7 @@ eth=$(ifconfig | grep -v inet6 | grep -v lo | grep -v 127.0.0.1 | grep "encap:Et
     [[ $eth != "" ]] && {
     msg -bar
     msg -ama " $(fun_trans "Aplicar el sistema para mejorar los paquetes Ssh?")"
-    msg -ama " $(fun_trans "Opcao para usuarios avanzados")"
+    msg -ama " $(fun_trans "Opcion para usuarios avanzados")"
     msg -bar
     read -p " [S/N]: " -e -i n sshsn
            [[ "$sshsn" = @(s|S|y|Y) ]] && {
@@ -487,7 +487,7 @@ esac
 ferramentas_fun () {
 tput cuu1 && tput dl1
 msg -bar2
-msg -ama "$(fun_trans "MENU DE FERRAMENTAS")"
+msg -ama "$(fun_trans "MENU DE HERRAMIENTAS")"
 msg -bar2
 local Numb=1
 for arqs in $(ls ${SCPfrm}); do
