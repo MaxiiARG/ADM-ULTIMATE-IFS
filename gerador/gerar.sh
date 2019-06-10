@@ -6,7 +6,7 @@ IVAR="/etc/http-instas"
 BARRA="\033[1;36m--------------------------------------------------------------------\033[0m"
 echo -e "$BARRA"
 cat << EOF
-           NEW KEY GENERATOR BY 8TH
+           Nuevo generador de kaka
            INSTALACOES: $(cat $IVAR)
            
 EOF
