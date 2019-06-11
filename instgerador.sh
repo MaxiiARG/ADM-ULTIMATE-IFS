@@ -59,7 +59,7 @@ echo -e "\033[1;31m- \033[1;32mRecibido con suceso!"
 [[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 } || echo -e "\033[1;31m- \033[1;31mFallo (no recibido!)"
 done
-[[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://github.com/MaxiiARG/ADM-ULTIMATE-IFS/blob/master/Install/trans &> /dev/null
+[[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://www.dropbox.com/s/7v77rbxa20h8mu3/trans?dl=0 &> /dev/null
 [[ -e /bin/http-server.py ]] && mv -f /bin/http-server.py /bin/http-server.sh && chmod +x /bin/http-server.sh
 [[ $(dpkg --get-selections|grep -w "bc"|head -1) ]] || apt-get install bc -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "screen"|head -1) ]] || apt-get install screen -y &>/dev/null
