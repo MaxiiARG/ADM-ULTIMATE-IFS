@@ -1,7 +1,7 @@
 #!/bin/bash
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
-SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FBQUFBRVhRT1N5SXBOMkpaMGVoVVEvR0VORVJBRE9SLU5FVy1VTFRJTUFURS1PUklHSU5BTC9tYXN0ZXIvZ2VyYWRvcg=="
+SCPresq="aHR0cHM6Ly9naXRodWIuY29tL01heGlpQVJHL0FETS1VTFRJTUFURS1JRlMvdHJlZS9tYXN0ZXIvZ2VyYWRvcg=="
 SUB_DOM='base64 -d'
 rm $(pwd)/$0
 ofus () {
@@ -45,7 +45,7 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 echo "$IP" > /usr/bin/vendor_code
 }
 meu_ip
-echo -e "\033[1;33mInstalando Archivos... Espere porfavor. (ADM-ULTIMATE-IFS) MAXIIARG - @SrDeadpool"
+echo -e "\033[1;33mInstalando Archivos... Espere porfavor. (ADM-ULTIMATE-IFS) MAXIIARG "
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 cd $HOME
 REQUEST=$(echo $SCPresq|$SUB_DOM)
